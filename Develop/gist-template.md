@@ -28,14 +28,35 @@ The following contents will contain the explanation of each piece of the code.
 ## Regex Components
 
 ### Anchors
+Anchors are also known as tags or elements. These can be used to define the structure and content of web pages. Common examples of HTML tags include the following: 
+
+- '^' (caret): This matches the start of a line or string
+- '$' (dollar sign): this matches the end of a line or string
+- '\b' (word boundary): this matches a word boundary, allowing you to match whole wordds
 
 ### Quantifiers
+Quantifiers specify the number of occurrences of a character or a group of of characters. Quantifiers are used for validation purposes. Common quantifiers include the following:
+- '*' (asterisk): Matches zero or more occurrences of the proceeding character
+- '+' (plus): Matches one or more occcurences of the preceding character or group
+- '?' (question mark): Matches zero or one occurrence of the preceding character or group
 
 ### OR Operator
+The OR operator is used to match vaious versions of the same tag and enables you to specify multiple alternatives for a pattern. Here are several examples of OR operators:
+- Matching opening and closing tags of <h1>, <h2>, or <h3>: <h[1-3]>|<\/h[1-3]>
+- Matching <a> tags with different attributes: <a\s+href=".+">|<\/a>
 
 ### Character Classes
+Character classes are used to match specific character ranges in HTML tags. They allow you to define a set of charactters that can match specific positions in a pattern. Here are several examples: 
+- matching alphanumeric characters:
+    - Character class: [A-Za-z0-9]
+- matching any digit:
+    - Character class: [0-9]
 
 ### Flags
+In regular expressions, character flags are used to modify the behavior of the regex pattern matching.
+- 'i' ignores case
+- 'u' unicode
+- 's' Dot (.) will match characters including newline
 
 ### Grouping and Capturing
 
