@@ -1,10 +1,15 @@
-# Title (replace with your title)
+# Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+This tutorial covers regex as it relates to matching HTML tags for web applications. 
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Regex, or regular expressions, are commonly used for HTML tag validation. This technique can be used for matching patterns and extracting HTML tags. Certain applications parse HTML content, which this enables them to do. Regular expressions use a number of different nomenclature and rules such as containing the @ symbol, which we will cover further.
+
+Here is an example of code that is within a regular expression for HTML tag validation: 
+<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>(.*?)<\/\1>
+
+The following contents will contain the explanation of each piece of the code. 
 
 ## Table of Contents
 
