@@ -59,10 +59,21 @@ In regular expressions, character flags are used to modify the behavior of the r
 - 's' Dot (.) will match characters including newline
 
 ### Grouping and Capturing
+Grouping and character classes are useed to group multiple expressions togetther and define a set of characters to match, respectively. 
+
+Grouping involvs the following:
+- Parentheses are used for grouping characters or expressions together.
+
+Character Classes:
+- Square brackets are used to define a character class
 
 ### Bracket Expressions
+These are also known as character classes and are used to define a set of characters to match. Here are some examples of bracket expressions for HTML
+- Negation: matches any non-digit character
 
 ### Greedy and Lazy Match
+- 'Greedy' involves matching the longest possible string. Greedy behavior involves the Greedy quantifier telling the engine to match instances of the subpattern
+- 'Lazy' matching is done with the shortest possible string. This is done by appending a question mark to the end of a regular quantifier. This tells the engine to match as few of the quantified tokens as needed
 
 ### Boundaries
 
