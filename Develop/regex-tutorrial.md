@@ -7,7 +7,7 @@ This tutorial covers regex as it relates to matching HTML tags for web applicati
 Regex, or regular expressions, are commonly used for HTML tag validation. This technique can be used for matching patterns and extracting HTML tags. Certain applications parse HTML content, which this enables them to do. Regular expressions use a number of different nomenclature and rules such as containing the @ symbol, which we will cover further.
 
 Here is an example of code that is within a regular expression for HTML tag validation: 
-<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>(.*?)<\/\1>
+`<([a-zA-Z][a-zA-Z0-9]*)\b[^>]*>(.*?)<\/\1>`
 
 The following contents will contain the explanation of each piece of the code. 
 
@@ -43,7 +43,8 @@ Quantifiers specify the number of occurrences of a character or a group of of ch
 ### OR Operator
 The OR operator is used to match vaious versions of the same tag and enables you to specify multiple alternatives for a pattern. Here are several examples of OR operators:
 - Matching opening and closing tags of <h1>, <h2>, or <h3>: <h[1-3]>|<\/h[1-3]>
-- Matching <a> tags with different attributes: <a\s+href=".+">|<\/a>
+- Matching tags with different attributes: <a\s+href=".+">|<\/a>
+
 
 ### Character Classes
 Character classes are used to match specific character ranges in HTML tags. They allow you to define a set of charactters that can match specific positions in a pattern. Here are several examples: 
@@ -86,10 +87,10 @@ Common boundary assertions in regex include the following:
 ### Back-references
 Back references are used to refer to previously matched group within the patter. They are denoted with the '\' symbol followed by a number representing the group number. There are several examplees of how back references can be used:
 1. Matching Repeated Words
-- Regex (\b\w+\b)\s+\1
+- Regex `(\b\w+\b)\s+\1`
 - This captures a wordd using the '\b\w+\b' pattern and then uses the bak referencce to mattch the same word again
 2. Matching HTML Tags
-- Regex <(\w+)>.*<\/\1>
+- Regex `<(\w+)>.*<\/\1>`
 - This uses HTML tags to ensure the opening and closing tags math. It captures the tag name using (\w+) and uses the back references to match the corresponding closing tags
 
 ### Look-ahead and Look-behind
