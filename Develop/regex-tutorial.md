@@ -32,7 +32,11 @@ Anchors are also known as tags or elements. These can be used to define the stru
 
 - '^' (caret): This matches the start of a line or string
 - '$' (dollar sign): this matches the end of a line or string
-- '\b' (word boundary): this matches a word boundary, allowing you to match whole wordds
+- '\b' (word boundary): this matches a word boundary, allowing you to match whole words.
+
+Here is an example of anchor usage:
+`const htmlRegex = /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/i;`
+
 
 ### Quantifiers
 Quantifiers specify the number of occurrences of a character or a group of of characters. Quantifiers are used for validation purposes. Common quantifiers include the following:
@@ -40,11 +44,16 @@ Quantifiers specify the number of occurrences of a character or a group of of ch
 - '+' (plus): Matches one or more occcurences of the preceding character or group
 - '?' (question mark): Matches zero or one occurrence of the preceding character or group
 
+Here is an example of quantifier usage:
+`const htmlRegex = /^<([a-z][a-z0-9]*)\b[^>]*>(.*?)<\/\1>$/i;`
+
 ### OR Operator
 The OR operator is used to match vaious versions of the same tag and enables you to specify multiple alternatives for a pattern. Here are several examples of OR operators:
 - Matching opening and closing tags of <h1>, <h2>, or <h3>: <h[1-3]>|<\/h[1-3]>
 - Matching tags with different attributes: <a\s+href=".+">|<\/a>
 
+Here is an example of or operator usage:
+`const htmlRegex = /^(div|p|span)$/i;`
 
 ### Character Classes
 Character classes are used to match specific character ranges in HTML tags. They allow you to define a set of charactters that can match specific positions in a pattern. Here are several examples: 
@@ -53,11 +62,17 @@ Character classes are used to match specific character ranges in HTML tags. They
 - matching any digit:
     - Character class: [0-9]
 
+Here is an example of character class usage:
+`const htmlRegex = /^[a-zA-Z0-9\-_]+$/;`
+
 ### Flags
 In regular expressions, character flags are used to modify the behavior of the regex pattern matching.
 - 'i' ignores case
 - 'u' unicode
 - 's' Dot (.) will match characters including newline
+
+Here is an example of flag usage:
+`const htmlRegex = /<div>/gi;`
 
 ### Grouping and Capturing
 Grouping and character classes are useed to group multiple expressions togetther and define a set of characters to match, respectively. 
@@ -68,9 +83,15 @@ Grouping involvs the following:
 Character Classes:
 - Square brackets are used to define a character class
 
+Here is an example of grouping usage:
+`const htmlRegex = /<(div|span) class="(.+?)">(.+?)<\/\1>/i;`
+
 ### Bracket Expressions
 These are also known as character classes and are used to define a set of characters to match. Here are some examples of bracket expressions for HTML
 - Negation: matches any non-digit character
+
+Here is an example of bracket expression usage:
+`const htmlRegex = /<([a-zA-Z]+)>/;`
 
 ### Greedy and Lazy Match
 - 'Greedy' involves matching the longest possible string. Greedy behavior involves the Greedy quantifier telling the engine to match instances of the subpattern
@@ -81,7 +102,7 @@ Boundaries are defined in regex with the '\b' character. These boundaries are us
 Common boundary assertions in regex include the following:
 1. Word Boundary ('\b'):
 - This matches the wordd in hello world
-2. Start of Ling ('^):
+2. Start of Line ('^):
 - Pattern matches the pattern only if it appears at the beginning of a line
 
 ### Back-references
@@ -96,6 +117,9 @@ Back references are used to refer to previously matched group within the patter.
 ### Look-ahead and Look-behind
 Lookahead and lookbehind are zero-width assertions that allow you to create conditions for matching patterns in final results. This enables pattern specification that are uttilized for various conditions.
 
+Here is an example of look-ahead usage:
+`const htmlRegex = /<([a-zA-Z]+)(?=\s*>)/;`
+
 ## Author
 
 Nabeel Khan is a current senior product manager at Amazon and a student of the Georgia Tech EdX Bootcamp. The links below send to the rest of this repository and his overall GitHub profile.
@@ -107,3 +131,4 @@ Link to Github Profile:
 https://github.com/nabeekha 
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+
