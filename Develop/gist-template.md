@@ -76,11 +76,32 @@ These are also known as character classes and are used to define a set of charac
 - 'Lazy' matching is done with the shortest possible string. This is done by appending a question mark to the end of a regular quantifier. This tells the engine to match as few of the quantified tokens as needed
 
 ### Boundaries
+Boundaries are defined in regex with the '\b' character. These boundaries are usd to define specific positions in the input text when a match should occur. They're not actual characters; instead they are assertions about the position of characters.
+Common boundary assertions in regex include the following:
+1. Word Boundary ('\b'):
+- This matches the wordd in hello world
+2. Start of Ling ('^):
+- Pattern matches the pattern only if it appears at the beginning of a line
 
 ### Back-references
+Back references are used to refer to previously matched group within the patter. They are denoted with the '\' symbol followed by a number representing the group number. There are several examplees of how back references can be used:
+1. Matching Repeated Words
+- Regex (\b\w+\b)\s+\1
+- This captures a wordd using the '\b\w+\b' pattern and then uses the bak referencce to mattch the same word again
+2. Matching HTML Tags
+- Regex <(\w+)>.*<\/\1>
+- This uses HTML tags to ensure the opening and closing tags math. It captures the tag name using (\w+) and uses the back references to match the corresponding closing tags
 
 ### Look-ahead and Look-behind
 
 ## Author
+
+Nabeel Khan is a current senior product manager at Amazon and a student of the Georgia Tech EdX Bootcamp. The links below send to the rest of this repository and his overall GitHub profile.
+
+Repository: 
+https://github.com/nabeekha/Regex-tutorial 
+
+Link to Github Profile:
+https://github.com/nabeekha 
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
