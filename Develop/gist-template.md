@@ -93,6 +93,7 @@ Back references are used to refer to previously matched group within the patter.
 - This uses HTML tags to ensure the opening and closing tags math. It captures the tag name using (\w+) and uses the back references to match the corresponding closing tags
 
 ### Look-ahead and Look-behind
+Lookahead and lookbehind are zero-width assertions that allow you to create conditions for matching patterns in final results. This enables pattern specification that are uttilized for various conditions.
 
 ## Author
 
